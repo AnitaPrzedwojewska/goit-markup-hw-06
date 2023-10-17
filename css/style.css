@@ -16,6 +16,10 @@ body {
 img {
     display: block;
 }
+input,
+input:active {
+    box-shadow: none;
+}
 /* ---------------------------- COMMON */
 .container {
     max-width: 1158px;
@@ -201,7 +205,6 @@ img {
 }
 .btn.order:hover,
 .btn.order:focus {
-    color: var(--WHITE);
     background-color: var(--PRESSED-STATE);
 }
 /* ---------------------------- OUR ADVANTAGES */
@@ -436,9 +439,11 @@ img {
     letter-spacing: 0.32px;
 }
 .footer-sm {
-    display: block;
+    margin-right: 80px;
 }
-.footer-title-sm {
+.footer-title-sm,
+.footer-label-newsletter {
+    display: block;
     margin-bottom: 16px;
     color: var(--WHITE);
     font-size: 16px;
@@ -475,6 +480,52 @@ img {
     width: 24px;
     height: 24px;
     fill: var(--LIGHT);
+}
+.footer-newsletter {
+    display: block;
+}
+.newsletter-data {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+.newsletter-input {
+    display: flex;
+    width: 264px;
+    height: 40px;
+    margin-right: 24px;
+    padding: 8px 16px;
+    font-size: 12px;
+    line-height: 2; 
+    letter-spacing: 0.48px;
+    color: var(--WHITE);
+    background: none;
+    border: 1px solid var(--WHITE);
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+.newsletter-input::placeholder {
+    color: var(--WHITE);
+}
+.newsletter-input:active {
+    box-shadow: inset none;
+}
+.btn-newsletter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 164px;
+    height: 40px;
+    padding: 8px 24px;
+    color: var(--WHITE);
+    background-color: var(--PRIMARY-BRAND);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.svg-subscribe {
+    fill: currentColor;
 }
 /* ---------------------------- BACKDROP */
 .modal-backdrop {
@@ -542,4 +593,110 @@ img {
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contacts-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 72px 24px 0 24px;
+}
+.contacts-title {
+    margin-bottom: 16px;
+    font-weight: 500;
+    text-align: center;
+}
+.contacts-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 8px;
+    justify-content: center;
+}
+.contacts-form-element {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.contacts-form-confirm {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: 100%;
+}
+.contacts-label {
+    display: block;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.48px;
+    color: var(--LATE-TEXT);
+}
+.contacts-input {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    padding: 11px 16px 11px 38px;
+    border: 1px solid var(--MODAL-TXT);
+    border-radius: 4px;
+    transition-property: border, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contacts-input:hover,
+.contacts-input:focus,
+.contacts-input:active {
+    border: 1px solid var(--PRIMARY-BRAND);
+    color: var(--PRIMARY-BRAND);
+}
+.contacts-comment {
+    height: 120px;
+    padding: 8px 16px;
+    font-size: 12px;
+    line-height: 14px; /* 116.667% */
+    letter-spacing: 0.48px;
+    color: var(--DARK);
+}
+.contacts-comment::placeholder {
+    color: var(--MODAL-TXT);
+}
+.svg-icon-contacts {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 16px;
+    bottom: 11px;
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+.contacts-input:hover.svg-icon-contacts,
+.contacts-input:focus.svg-icon-contacts,
+.contacts-input:active.svg-icon-contacts {
+    color: var(--PRIMARY-BRAND);
+}
+.icon-contacts {
+    display: flex;
+}
+.contacts-comment {
+   height: 120px; 
+}
+.btn.send {
+    width: 169px;
+    height: 56px;
+    margin: 24px auto;
+    padding: 16px 32px;
+    color: var(--WHITE);
+    background-color: var(--PRIMARY-BRAND);
+    border: none;
+    cursor: pointer;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn.send:hover,
+.btn.send:focus {
+    background-color: var(--PRESSED-STATE);
 }
