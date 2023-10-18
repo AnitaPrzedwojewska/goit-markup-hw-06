@@ -440,11 +440,7 @@ img {
     line-height: 1.5;
     letter-spacing: 0.32px;
 }
-.footer-sm {
-    margin-right: 80px;
-}
-.footer-title-sm,
-.footer-label-newsletter {
+.footer-title {
     display: block;
     margin-bottom: 16px;
     color: var(--WHITE);
@@ -452,6 +448,9 @@ img {
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.32px;
+}
+.footer-sm {
+    margin-right: 80px;
 }
 .list-sm-footer {
     display: flex;
@@ -486,7 +485,7 @@ img {
 .footer-newsletter {
     display: block;
 }
-.newsletter-data {
+.footer-form-newsletter {
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -499,10 +498,10 @@ img {
     margin-right: 24px;
     padding: 8px 16px;
     font-size: 12px;
-    line-height: 2; 
-    letter-spacing: 0.48px;
+    line-height: 1.5; 
+    letter-spacing: 0.04;
     color: var(--WHITE);
-    background: none;
+    background-color: transparent;
     border: 1px solid var(--WHITE);
     border-radius: 4px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
@@ -510,16 +509,16 @@ img {
 .newsletter-input::placeholder {
     color: var(--WHITE);
 }
-.newsletter-input:active {
-    box-shadow: inset none;
-}
 .btn-newsletter {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 164px;
+    min-width: 165px;
     height: 40px;
     padding: 8px 24px;
+    font-weight: 500;
+    line-height: 1.5; 
+    letter-spacing: 0.04em;
     color: var(--WHITE);
     background-color: var(--PRIMARY-BRAND);
     border: none;
@@ -527,6 +526,7 @@ img {
     cursor: pointer;
 }
 .svg-subscribe {
+    margin-left: 16px;
     fill: currentColor;
 }
 /* ---------------------------- BACKDROP */
