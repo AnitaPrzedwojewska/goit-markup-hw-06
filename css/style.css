@@ -16,9 +16,11 @@ body {
 img {
     display: block;
 }
-input,
-input:active {
-    box-shadow: none;
+.clear-style {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none ;
+    
 }
 /* ---------------------------- COMMON */
 .container {
@@ -598,7 +600,7 @@ input:active {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 72px 24px 0 24px;
+    padding: 72px 24px 24px 24px;
 }
 .contacts-title {
     margin-bottom: 16px;
@@ -608,22 +610,21 @@ input:active {
 .contacts-data {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    row-gap: 8px;
     justify-content: center;
+    align-items: center;
 }
 .contacts-form-element {
     position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-bottom: 8px;
 }
-.contacts-form-confirm {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    width: 100%;
+.contacts-form-element:nth-of-type(4) {
+    margin-bottom: 16px;
+}
+.contacts-form-element:last-of-type {
+    margin-bottom: 24px;
 }
 .contacts-label {
     display: block;
@@ -650,6 +651,11 @@ input:active {
     border: 1px solid var(--PRIMARY-BRAND);
     color: var(--PRIMARY-BRAND);
 }
+.contacts-input:hover + .svg-icon-contacts,
+.contacts-input:focus + .svg-icon-contacts,
+.contacts-input:active + .svg-icon-contacts {
+    fill: var(--PRIMARY-BRAND);
+}
 .contacts-comment {
     height: 120px;
     padding: 8px 16px;
@@ -670,23 +676,37 @@ input:active {
     bottom: 11px;
     width: 18px;
     height: 18px;
-    fill: currentColor;
-}
-.contacts-input:hover.svg-icon-contacts,
-.contacts-input:focus.svg-icon-contacts,
-.contacts-input:active.svg-icon-contacts {
-    color: var(--PRIMARY-BRAND);
+    fill: var(--DARK);
 }
 .icon-contacts {
     display: flex;
 }
-.contacts-comment {
-   height: 120px; 
+.contacts-form-confirm {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 24px;
+}
+.contacts-privacy-policy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    border: 1px solid var(--MODAL-TXT);
+    border-radius: 4px;
+    transition-property: border, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn.send {
     width: 169px;
     height: 56px;
-    margin: 24px auto;
+    margin: auto;
     padding: 16px 32px;
     color: var(--WHITE);
     background-color: var(--PRIMARY-BRAND);
