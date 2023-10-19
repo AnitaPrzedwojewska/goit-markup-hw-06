@@ -553,6 +553,7 @@ img {
     left: 50%;
     width: 408px;
     min-height: 584px;
+    padding: 72px 24px 24px 24px;
     background-color: var(--MODAL-BOX);
     border-radius: 4px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -596,25 +597,19 @@ img {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contacts-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 72px 24px 24px 24px;
-}
 .contacts-title {
     margin-bottom: 16px;
     font-weight: 500;
     text-align: center;
+    color: var(--DARK)
 }
-.contacts-data {
+.contacts-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 .contacts-form-element {
-    position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -623,33 +618,47 @@ img {
 .contacts-form-element:nth-of-type(4) {
     margin-bottom: 16px;
 }
-.contacts-form-element:last-of-type {
-    margin-bottom: 24px;
-}
 .contacts-label {
     display: block;
+    margin-bottom: 4px;
     font-size: 12px;
-    line-height: 14px;
-    letter-spacing: 0.48px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
     color: var(--LATE-TEXT);
 }
-.contacts-input {
+.contacts-input-box {
+    position: relative;
     display: flex;
     align-items: center;
+}
+.contacts-input {
     width: 100%;
     height: 40px;
-    padding: 11px 16px 11px 38px;
-    border: 1px solid var(--MODAL-TXT);
-    border-radius: 4px;
-    transition-property: border, color;
+    padding-left: 38px; 
+    background-color: transparent; 
+    border: 1px solid var(--MODAL-TXT); 
+    border-radius: 4px; 
+    outline: transparent; 
+    transition-property: border-color;
     transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .contacts-input:hover,
 .contacts-input:focus,
 .contacts-input:active {
-    border: 1px solid var(--PRIMARY-BRAND);
-    color: var(--PRIMARY-BRAND);
+    border-color: var(--PRIMARY-BRAND);
+}
+.svg-icon-contacts {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    width: 18px;
+    height: 24px;
+    fill: var(--DARK);
+    transform: translateY(-50%);
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts-input:hover + .svg-icon-contacts,
 .contacts-input:focus + .svg-icon-contacts,
@@ -658,28 +667,27 @@ img {
 }
 .contacts-comment {
     height: 120px;
+    resize: none;
     padding: 8px 16px;
     font-size: 12px;
-    line-height: 14px; /* 116.667% */
-    letter-spacing: 0.48px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
     color: var(--DARK);
+    background-color: transparent; 
+    border: 1px solid var(--MODAL-TXT); 
+    border-radius: 4px; 
+    outline: transparent; 
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
+}
+.contacts-comment:hover,
+.contacts-comment:focus,
+.contacts-comment:active {
+    border-color: var(--PRIMARY-BRAND);
 }
 .contacts-comment::placeholder {
     color: var(--MODAL-TXT);
-}
-.svg-icon-contacts {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    left: 16px;
-    bottom: 11px;
-    width: 18px;
-    height: 18px;
-    fill: var(--DARK);
-}
-.icon-contacts {
-    display: flex;
 }
 .contacts-form-confirm {
     position: relative;
@@ -690,7 +698,7 @@ img {
     width: 100%;
     margin-bottom: 24px;
 }
-.contacts-privacy-policy {
+.contacts-privacy {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -699,11 +707,30 @@ img {
     margin-right: 8px;
     border: 1px solid var(--MODAL-TXT);
     border-radius: 4px;
-    transition-property: border, color;
+}
+.check-box {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--MODAL-TXT);
+    border-radius: 2px;
+    fill: transparent;
+    transition-property: background-color, border, fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.contacts-privacy:checked .check-box {
+    background-color: var(--PRESSED-STATE);
+    border: none;
+    fill: var(--LIGHT); 
+}
+.link-privacy {
+    color: var(--PRIMARY-BRAND);
+}
 .btn.send {
+    display: block;
     width: 169px;
     height: 56px;
     margin: auto;
@@ -711,6 +738,8 @@ img {
     color: var(--WHITE);
     background-color: var(--PRIMARY-BRAND);
     border: none;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     cursor: pointer;
     transition-property: background-color;
     transition-duration: 250ms;
