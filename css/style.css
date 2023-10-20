@@ -701,16 +701,6 @@ img {
     width: 100%;
     margin-bottom: 24px;
 }
-/* .contacts-privacy {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 16px;
-    height: 16px;
-    margin-right: 8px;
-    border: 1px solid var(--MODAL-TXT);
-    border-radius: 4px; 
-} */
 .check-box {
     display: inline-flex;
     justify-content: center;
@@ -725,7 +715,7 @@ img {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-#user-privacy:checked + .contacts-label > .check-box {
+#user-privacy:checked + .contacts-label .check-box {
     background-color: var(--PRESSED-STATE);
     border: none;
     fill: var(--LIGHT); 
