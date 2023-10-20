@@ -490,6 +490,7 @@ img {
     flex-direction: row;
     justify-content: start;
     align-items: center;
+    gap: 24px;
 }
 .newsletter-input {
     display: flex;
@@ -674,7 +675,7 @@ img {
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
-    color: var(--DARK);
+    color: var(--MODAL-TXT);
     background-color: transparent; 
     border: 1px solid var(--MODAL-TXT); 
     border-radius: 4px; 
@@ -724,7 +725,7 @@ img {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-#user-privacy:checked + .check-box {
+#user-privacy:checked ~ .check-box {
     background-color: var(--PRESSED-STATE);
     border: none;
     fill: var(--LIGHT); 
