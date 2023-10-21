@@ -708,14 +708,14 @@ img {
     width: 16px;
     height: 16px;
     margin-right: 8px;
-    border: 1px solid var(--MODAL-TXT);
+    border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
     fill: transparent;
     transition-property: background-color, border, fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-#user-privacy:checked + .contacts-label .check-box {
+.contacts-privacy:checked + .contacts-label span {
     background-color: var(--PRESSED-STATE);
     border: none;
     fill: var(--LIGHT); 
