@@ -73,6 +73,7 @@ img {
     line-height: 1.5;
     letter-spacing: 0.04em;
     border-radius: 4px; 
+    cursor: pointer;
 }
 .visually-hidden {
   position: absolute;
@@ -200,7 +201,6 @@ img {
     color: var(--WHITE);
     background-color: var(--PRIMARY-BRAND);
     border: none;
-    cursor: pointer;
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -347,7 +347,6 @@ img {
     color: var(--PRIMARY-BRAND);
     background-color: var(--LIGHT);
     border: 1px solid var(--ACCENT);
-    cursor: pointer;
     transition-property: color, background-color, border-color, box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -511,21 +510,16 @@ img {
 .newsletter-input::placeholder {
     color: var(--WHITE);
 }
-.btn-newsletter {
+.btn.newsletter {
     display: flex;
     justify-content: center;
     align-items: center;
     min-width: 165px;
     height: 40px;
     padding: 8px 24px;
-    font-weight: 500;
-    line-height: 1.5; 
-    letter-spacing: 0.04em;
     color: var(--WHITE);
     background-color: var(--PRIMARY-BRAND);
     border: none;
-    border-radius: 4px;
-    cursor: pointer;
 }
 .svg-subscribe {
     margin-left: 16px;
@@ -566,7 +560,7 @@ img {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.btn-close-order {
+.btn.close-order {
     position: absolute;
     top: 24px;
     right: 24px;
@@ -580,13 +574,12 @@ img {
     background-color: var(--ACCENT);
     border: 1px solid rgba(0, 0, 0, 0.10);
     border-radius: 50%;
-    cursor: pointer;
     transition-property: background-color, border;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.btn-close-order:hover,
-.btn-close-order:focus {
+.btn.close-order:hover,
+.btn.close-order:focus {
     color: var(--WHITE);
     background-color: var(--PRESSED-STATE);
     border: none;
@@ -738,7 +731,6 @@ img {
     border: none;
     border-radius: 4px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    cursor: pointer;
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
