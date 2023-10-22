@@ -720,6 +720,10 @@ img {
     border: none;
     fill: var(--LIGHT); 
 }
+.svg-icon-checked {
+    width: 15px;
+    height: 15px;
+}
 .link-privacy {
     color: var(--PRIMARY-BRAND);
 }
